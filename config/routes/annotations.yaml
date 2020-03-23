@@ -1,0 +1,22 @@
+controllers_front:
+    prefix: '/{_locale}'
+    name_prefix: 'front_'
+    resource: ../../src/Controller/Front/
+    type: annotation
+    requirements:
+        _locale: 'en|fr'
+
+controllers_back:
+    prefix: 'admin'
+    name_prefix: 'back_'
+    resource: ../../src/Controller/Back/
+    type: annotation
+
+controllers:
+    prefix: '/{_locale}'
+    resource: ../../src/Controller/
+    type: annotation
+
+kernel:
+    resource: ../../src/Kernel.php
+    type: annotation

@@ -1,0 +1,30 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light{% if top is defined %}is-top{% endif %}">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ path('front_index') }}">Symfony</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+        <button class="btn btn-transparent p-0">
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="ml-auto navbar-nav">
+                {% if app.user %}
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fas fa-user"></i>{{ 'user.title'|trans }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <a class="dropdown-item" href="{{ path('front_user_edit') }}"><i class="fas fa-user-cog"></i>{{ 'user.informations'|trans }}</a>
+                            <a class="dropdown-item" href="{{ path('security_logout') }}"><i class="fas fa-sign-out-alt"></i>{{ 'button.logout'|trans }}</a>
+                        </div>
+                    </li>
+                {% else %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ path('security_login') }}"><i class="fas fa-sign-in-alt"></i>{{ 'button.login'|trans }}</a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>

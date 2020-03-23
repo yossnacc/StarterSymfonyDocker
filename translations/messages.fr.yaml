@@ -1,0 +1,79 @@
+breadcrumb:
+  dashboard: "Dashboard"
+  new: "Ajouter"
+  edit: "Modifier"
+  show: "Voir"
+
+flash:
+  confirmRegister: "Un email vous a été envoyé pour confirmer votre inscription"
+  tokenNotExist: "Le token n'existe pas. Vous avez probablement déjà confirmer votre compte"
+  userUpdated: "Vos informations ont été mises à jour"
+  userDeleted: "Votre compte sera supprimé dans quelques jours"
+  resetPassword:
+    mail: "Un email vient d'être envoyé afin de réinitialiser votre mot de passe"
+    success : "Votre mot de passe a bien été réinitialisé"
+    error: "Erreur lors de la réinitialisation du mot de passe"
+
+
+assert:
+  email: "L'email renseigné n'est pas un email valide"
+
+page:
+  404:
+    title: "Désolé, cette page n'est pas disponible"
+    content: "La page que vous avez demandé a été déplacé ou supprimé"
+    button: "Retour à l'accueil"
+  reset:
+    title: "Réinitialiser votre mot de passe"
+  confirmUser:
+    title: "Votre compte est activé"
+    content: "Merci d'avoir confirmer votre adresse mail, vous pouvez dès maintenant vous connecter avec votre compte."
+
+button:
+  login: "Se connecter"
+  forgot: "Mot de passe oublié ?"
+  send: "Envoyer"
+  update: "Mettre à jour"
+  logout: "Se déconnecter"
+  add: "Ajouter"
+  back: "Retour"
+  save: "Sauvegarder"
+  show: "Voir"
+  edit: "Modifier"
+  delete: "Supprimer"
+  confirmDelete: "Confirmez-vous la suppression de item"
+  register: "S'inscrire"
+  remember: "Rester connecté ?"
+  close: "Fermer"
+  deleteUser: "Supprimer mon compte"
+
+user:
+  singular: "Utilisateurs"
+  plurial: "Utilisateurs"
+  title: "Mon compte"
+  informations: "Mes informations"
+  updatePassword: "Modifer mon mot de passe"
+  email: "Email"
+  password: "Mot de passe"
+  repeatPassword: "Confirmer le mot de passe"
+  actualPassword: "Saisir votre mot de passe"
+  firstname: "Prénom"
+  name: "Nom"
+  empty: "Il n'y a pas d'utilisateur"
+  add: "Ajouter un utilisateur"
+  terms: "Conditions d'utilisation"
+  error:
+    invalid: "Identifiant invalide"
+    password: "Le mot de passe actuel saisi est invalide"
+    active: "Vous devez confirmer votre compte, vérifier votre boîte mail ou vos spams."
+    delete: "Votre compte a été supprimé"
+
+email:
+  confirmUser:
+    subject: "Merci de bien vouloir confirmer votre compte"
+    content: "Merci de votre inscription, pour activer votre compte, cliquer sur le lien suivant : "
+    button: "Cliquez-ici"
+  resetPassword:
+    subject: "Réinitialiser son mot de passe"
+    content: "Afin de réinitialiser votre mot de passe, cliquer sur le lien suivant : "
+    button: "Cliquez-ici"

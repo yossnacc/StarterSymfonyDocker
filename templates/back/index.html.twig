@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+{% block body_class %}class="admin"{% endblock %}
+{% block body %}
+    {% include '_partials/flash.html.twig' %}
+    <div class="wrapper">
+        <div class="sidebar">
+            {% include '_partials/sidebar.html.twig' %}
+        </div>
+        <div class="content">
+            {% include '_partials/navigation.html.twig' %}
+            <header class="container-fluid">
+                <div class="row align-items-center mb-3">
+                    <div class="col-md-7">
+                        <div class="d-flex align-items-center">
+                            <h1>{% block title %}Dashboard{% endblock %}</h1>
+                            {% include '_partials/breadcrumb.html.twig' %}
+                        </div>
+                    </div>
+                    <div class="col-md-5 text-right">
+                        {% block buttons %}{% endblock %}
+                    </div>
+                </div>
+            </header>
+            {% block content %}
+                <section>
+                    <div class="container-fluid">
+                        <div class="card">
+                            <div class="card-body">
+                                Probably an awesome dashboard
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            {% endblock %}
+        </div>
+    </div>
+    {% include '_partials/footer.html.twig' %}
+{% endblock %}

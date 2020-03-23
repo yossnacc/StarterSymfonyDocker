@@ -1,0 +1,48 @@
+{% extends 'back/index.html.twig' %}
+
+{% block title %}{{ 'user.plurial'|trans }}{% endblock %}
+
+{% block buttons %}
+    {% include '_partials/buttons/new.html.twig' with {'href': path('back_user_new')} %}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <div class="container-fluid">
+            <table class="table table-striped data-table">
+                <thead>
+                <tr>
+                    <th>{{ 'user.email'|trans }}</th>
+                    <th class="hidden-md">{{ 'user.firstname'|trans }}</th>
+                    <th class="hidden-md">{{ 'user.name'|trans }}</th>
+                    <th>Actions</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for user in users %}
+                    {% if user != current_user %}
+                        <tr>
+                            <td>{{ user.email }}</td>
+                            <td class="hidden-md">{{ user.firstname}}</td>
+                            <td class="hidden-md">{{ user.name}}</td>
+                            <td class="text-right">
+                                {% include '_partials/buttons/show.html.twig' with {'href': path('back_user_show', {'id': user.id})} %}
+                                {% include '_partials/buttons/edit.html.twig' with {'href' : path('back_user_edit', {'id': user.id})} %}
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% else %}
+                    <tr>
+                        <td colspan="4">{{ 'user.empty'|trans }}</td>
+                    </tr>
+                {% endfor %}
+                {% if current_user and users|length == 1 %}
+                    <tr>
+                        <td colspan="4">{{ 'user.empty'|trans }}</td>
+                    </tr>
+                {% endif %}
+                </tbody>
+            </table>
+        </div>
+    </section>
+{% endblock %}

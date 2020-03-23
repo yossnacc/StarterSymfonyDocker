@@ -1,0 +1,23 @@
+{{ form_start(form) }}
+<div class="row">
+    <div class="col-md-12 mb-12">
+        {{ form_row(form.email) }}
+    </div>
+    <div class="col-md-6 mb-3">
+        {{ form_row(form.name) }}
+    </div>
+
+    <div class="col-md-6 mb-3">
+        {{ form_row(form.firstname) }}
+    </div>
+    <div class="col-md-6 mb-3">
+        {{ form_row(form.plainPassword.first) }}
+    </div>
+
+    <div class="col-md-6 mb-3">
+        {{ form_row(form.plainPassword.second) }}
+    </div>
+    <div class="col-md-12 text-center">
+        {% include '_partials/buttons/save.html.twig' %}
+    </div>
+{{ form_end(form) }}
